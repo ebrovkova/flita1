@@ -103,34 +103,3 @@ int main(void){
     clear_mem(set);
     return 0;
 }
-    return h;
-}
-
-
-void print_set(Node *s){
-    while (s != NULL){
-        printf("%s %d\n", s->bin, s->dec);
-        s = s->next;
-    }
-}
-
-
-int main(void){
-    printf("Type 1 to add element\nType 2 to print set\nType 0 to exit\n");
-    Node *set = NULL;
-
-    int action;
-    scanf("%d", &action);
-    while (action != 0){
-        if (action == 1){
-            set = add(set);
-        } else if (action == 2){
-            print_set(set);
-            printf("\n");
-        }
-        scanf("%d", &action);
-    }
-
-    clear_mem(set);
-    return 0;
-}
