@@ -29,8 +29,7 @@ int bin_to_dec(char *bin_str){
     int dec = 0;
     while (*bin_str) {
         dec *= 2;
-        if (*bin_str++ == '1')
-            dec += 1;
+        dec += (*bin_str++ - '0');
     }
     return dec;
 }
@@ -85,7 +84,7 @@ void print_set(Node *pointer){
 
 
 int main(void){
-    printf("Type 1 to add element\nType 2 to print set\nType 0 to exit\n");
+    puts("Type 1 to add element\nType 2 to print set\nType 0 to exit");
     Node *set = NULL;
 
     int action;
